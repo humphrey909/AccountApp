@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/totalbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/borderroundwhite"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/topbox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/toparea"
+            tools:ignore="MissingConstraints"
+            android:text="커플 연결"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/middlebox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/namebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/myname"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_weight="40"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text="님 환영합니다. "
+                    android:gravity="left"
+                    android:textSize="15dp"
+                    android:layout_weight="60"
+                    />
+            </LinearLayout>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="서로의 초대코드를 입력하여 연결해 주세요."
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_marginBottom="20dp"
+            >
+
+        </TextView>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/codebox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:ignore="MissingConstraints"
+            android:orientation="horizontal"
+            android:background="@drawable/border_bottom"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/mycodetxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="7012 1676"
+                android:textAlignment="textStart"
+                android:layout_weight="80"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="상대방 초대코드를 전달받으셨나요?"
+            android:gravity="start"
+            android:textSize="12dp"
+            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/othercodetxt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="5"
+            android:inputType="textPersonName"
+            android:hint="전달받은 초대코드 입력"
+            android:background="@drawable/border_bottom"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            />
+
+
+        <Button
+            android:id="@+id/codewirtebtn"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textSize="16dp"
+            android:text="연결하기"
+            android:background="@drawable/borderroundblue"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

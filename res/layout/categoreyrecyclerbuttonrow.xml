@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <Button
+        android:id="@+id/rowname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#3f3f3f"
+        android:textSize="13dp"
+        android:hint="글자입니다."
+        android:gravity="center"
+        android:theme="@style/AppTheme.BlueRipple"
+       />
+
+</LinearLayout>

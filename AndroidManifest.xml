@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.neo.accountapp_3">
+    <!-- camera, gallery -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" /> <!-- location info -->
+    <!-- 필요한 권한 생성 - 지도 -->
+    <permission
+        android:name="com.neo.accountapp_3.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" /> <!-- 권한 부여 설정 -->
+    <uses-permission android:name="com.neo.accountapp_3.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <application
+        android:name=".db.GlobalClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Map.AccountTotalMap"></activity>
+        <activity
+            android:name=".Map.MapActivityPager"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="7a56eviwpl" />
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="@string/kakao_key" />
+
+        <activity android:name=".Statistics.MonthStatisticsActivityPager" />
+        <activity android:name=".Setting.PwManagement" />
+        <activity android:name=".Setting.ProfilesetManagement" />
+        <activity android:name=".PaymentCategory.PaymentkindslistManagement" />
+        <activity android:name=".UseCategory.UsekindslistManagement" />
+        <activity android:name=".PeopleCategory.WholistManagement" />
+        <activity android:name=".Setting.AccountKindsSetlist" />
+        <activity android:name=".PaymentCategory.PaymentKindsAdd" />
+        <activity android:name=".UseCategory.UseKindsAdd" />
+        <activity android:name=".PeopleCategory.WhoAdd" />
+        <activity android:name=".PaymentCategory.PaymentKindsSelect" />
+        <activity android:name=".UseCategory.UseKindsSelect" />
+        <activity android:name=".PeopleCategory.WhoSelect" /> <!-- picture save -->
+
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".Statistics.MonthStatisticsActivity" />
+        <activity android:name=".Statistics.TotalStatisticsActivity" />
+        <activity
+            android:name=".Statistics.SearchActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Account.AccountAdd3"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Account.AccountAdd2"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Account.AccountEdit"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Account.AccountAdd"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".CodeShareActivity" />
+        <activity android:name=".joinActivity" />
+        <activity android:name=".loginActivity" >
+        </activity>
+        <activity
+            android:name=".LoadingActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_IMAGE_CAPTURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
+                <data android:host="oauth"
+                    android:scheme="@string/kakao_key_string" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

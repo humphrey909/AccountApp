@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account.AccountAdd"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="MissingConstraints"
+        android:layout_weight="10">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="자산(결제수단)"
+            android:layout_gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_weight="90"
+        >
+        <RadioGroup
+            android:id="@+id/peopleradiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mybtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="나"
+                android:background="@drawable/radiobackgroundselector"
+                android:textColor="@drawable/radiotextcolorselector"
+                android:button="@null"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                />
+            <RadioButton
+                android:id="@+id/otherbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="상대"
+                android:background="@drawable/radiobackgroundselector"
+                android:textColor="@drawable/radiotextcolorselector"
+                android:button="@null"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                />
+            <RadioButton
+                android:id="@+id/withbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="우리"
+                android:background="@drawable/radiobackgroundselector"
+                android:textColor="@drawable/radiotextcolorselector"
+                android:button="@null"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                />
+        </RadioGroup>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/paymentbox"
+        android:layout_weight="90"
+        android:orientation="horizontal">
+
+
+            <RadioGroup
+                android:id="@+id/paymentradiogroup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/cash"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radiobackgroundselector"
+                android:textColor="@drawable/radiotextcolorselector"
+                android:button="@null"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="현금" />
+            <RadioButton
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radiobackgroundselector"
+                android:textColor="@drawable/radiotextcolorselector"
+                android:button="@null"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="은행" />
+            <RadioButton
+                android:id="@+id/creditcard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radiobackgroundselector"
+                android:textColor="@drawable/radiotextcolorselector"
+                android:button="@null"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="신용카드" />
+            <RadioButton
+                android:id="@+id/loan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radiobackgroundselector"
+                android:textColor="@drawable/radiotextcolorselector"
+                android:button="@null"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="대출" />
+            </RadioGroup>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/PaymentkindsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

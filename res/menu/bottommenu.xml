@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/maintab"
+        app:showAsAction="ifRoom"
+        android:icon="@mipmap/home"
+        android:title="메인"
+        />
+    <item
+        android:id="@+id/accounttab"
+        app:showAsAction="ifRoom"
+        android:icon="@mipmap/account"
+        android:title="가계부"/>
+
+    <item
+        android:id="@+id/alerttab"
+        app:showAsAction="ifRoom"
+        android:icon="@mipmap/alert"
+        android:title="알림">
+    </item>
+    <item
+        android:id="@+id/settingtab"
+        app:showAsAction="ifRoom"
+        android:icon="@mipmap/setting"
+
+        android:title="설정">
+    </item>
+</menu>

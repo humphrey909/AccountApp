@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Accountapp</string>
+    <string name="login">로그인</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank monthStatisticsFragment</string>
+    <string name="chooser_title">사진첩 열기</string>
+
+
+
+    <string name="naver_client_id">6irKv48hfn7C3dYO2Vev</string>
+    <string name="naver_client_secret">dy9Jrgpvm0</string>
+    <string name="naver_client_name">Accountbook</string>
+
+    <string name="kakao_key">a177163b3d1d34303290ca58ff17e012</string>
+    <string name="kakao_key_string">kakaoa177163b3d1d34303290ca58ff17e012</string>
+</resources>

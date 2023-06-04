@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/deletetab"
+        app:showAsAction="always"
+        android:icon="@mipmap/garbage"
+        android:title="닫기"/>
+    <item
+        android:id="@+id/savetab"
+        app:showAsAction="always"
+        android:icon="@mipmap/chk"
+        android:title="저장"/>
+</menu>

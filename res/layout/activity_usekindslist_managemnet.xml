@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="MissingConstéraints"
+        android:layout_weight="10">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="사용 카테고리 관리"
+            android:layout_gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+
+        <RadioGroup
+            android:id="@+id/useradiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/input_pricebtn"
+            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:text="입금"
+            android:layout_gravity="center"
+            android:background="@drawable/inoutputbtnselector"
+            android:textColor="@drawable/radiotextcolorselector_bottom"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="/"
+            android:layout_gravity="center"
+            />
+        <RadioButton
+            android:id="@+id/output_pricebtn"
+            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:text="지출"
+            android:layout_gravity="center"
+            android:background="@drawable/inoutputbtnselector"
+            android:textColor="@drawable/radiotextcolorselector_bottom"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            />
+        </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/UsekindsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        />
+</LinearLayout>

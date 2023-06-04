@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="MissingConstéraints"
+        android:layout_weight="10">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="결재수단 항목 추가"
+            android:layout_gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/whobox"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/whoimg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:src="@mipmap/explain3"
+            android:layout_gravity="center"
+            />
+        <EditText
+            android:id="@+id/nameedit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="92"
+            android:layout_gravity="center"
+            android:paddingStart="10dp"
+            android:text="" />
+
+    </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/peopleradiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/mybtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radiobackgroundselector"
+            android:textColor="@drawable/radiotextcolorselector"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="나" />
+        <RadioButton
+            android:id="@+id/otherbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radiobackgroundselector"
+            android:textColor="@drawable/radiotextcolorselector"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="상대" />
+        <RadioButton
+            android:id="@+id/withbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radiobackgroundselector"
+            android:textColor="@drawable/radiotextcolorselector"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="우리" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/paymentradiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/cashbtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radiobackgroundselector"
+            android:textColor="@drawable/radiotextcolorselector"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="현금" />
+        <RadioButton
+            android:id="@+id/bankbtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radiobackgroundselector"
+            android:textColor="@drawable/radiotextcolorselector"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="은행" />
+        <RadioButton
+            android:id="@+id/creditbtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radiobackgroundselector"
+            android:textColor="@drawable/radiotextcolorselector"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="신용카드" />
+        <RadioButton
+            android:id="@+id/loanbtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radiobackgroundselector"
+            android:textColor="@drawable/radiotextcolorselector"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="대출" />
+
+        </RadioGroup>
+
+
+
+
+</LinearLayout>
